@@ -1,6 +1,6 @@
 package hh_inheritanceFurtherDetails.bb_PolymorphWInterface;
 
-class Adult implements AgentI {
+class Adult implements AgentI{
 
 	private int id;
 	

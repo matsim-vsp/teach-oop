@@ -3,29 +3,36 @@ package cc_klassen.mm_interfaceInheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-class Main {
+class Main{
 
-	public static void main(String[] args) {
+	public static void main( String[] args ){
 
-		List<PersonI> persons = new ArrayList<>();
+		// container
+		List<Agent> agents = new ArrayList<>() ;
 
-		{
-			PersonImpl1 p1 = new PersonImpl1();
-			p1.setLastName( "Nagel");
-			persons.add( p1 );
+		// objects of different implementations are created:
+		for ( int ii=0 ; ii<5; ii++ ) {
+			final Agent dog = new Dog( ii );
+			agents.add( dog ) ;
 		}
-		{
-			PersonImpl2 p2 = new PersonImpl2( 12);
-			persons.add( p2 );
-		}
-		{
-			PersonImpl1 p2 = new PersonImpl1( );
-			p2.setLastName( "Gao" );
-			persons.add( p2 );
+		for ( int ii=0 ; ii<5; ii++ ){
+			agents.add( new Person() ) ;
 		}
 
-		for( PersonI person : persons ){
-			System.out.println( "personName=" + person.getLastName() ) ;
+
+		// the objects are used:
+		for( Agent agent : agents ){
+			agent.move();
+
+			if ( agent instanceof CanBark ) {
+				((CanBark) agent).bark();
+			}
+
+			if ( agent instanceof CanSpeak ) {
+				((CanSpeak) agent).speak();
+			}
+
+
 		}
 
 	}

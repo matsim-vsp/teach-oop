@@ -1,6 +1,5 @@
 package cc_klassen.aa_test;
 
-import java.sql.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class Main {
 
 		//
 
-		Child child = new Child( 2024-9, "Kreuzgasse");
+		Child child = new Child( 2015, "Kreuzgasse");
 
 		persons.add( child );
 
@@ -30,10 +29,8 @@ public class Main {
 
 		//
 
-		Adult adult = new Adult( 54, "Siemens");
+		Adult adult = new Adult( 2000, "Siemens");
 
-//		adult.setAge( 54 );
-//		adult.setEmployer( "Siemens" );
 		persons.add( adult );
 
 		System.out.println( "age=" + adult.getAge() + "; employer=" + adult.getEmployer() );
@@ -41,7 +38,6 @@ public class Main {
 		//
 
 		for( Person person1 : persons ){
-//			person1.print("this is my addiitional info");
 			person1.print();
 		}
 		

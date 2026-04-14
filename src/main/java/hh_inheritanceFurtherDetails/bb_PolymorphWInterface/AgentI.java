@@ -1,6 +1,6 @@
 package hh_inheritanceFurtherDetails.bb_PolymorphWInterface;
 
-interface AgentI {
+interface AgentI{
 	
 	public int getId() ;
 	

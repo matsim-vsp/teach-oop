@@ -1,4 +1,4 @@
-package cc_klassen.xx_vl;
+package cc_klassen.mm_interfaceInheritance;
 
 class Person implements Agent, CanSpeak{
 	private int id;

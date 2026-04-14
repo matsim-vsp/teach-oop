@@ -35,7 +35,7 @@ class Main {
 			agents.add(dg);
 		}
 
-		for (AgentI ag : agents){ // Schleife über den Inhalt von agents
+		for ( AgentI ag : agents){ // Schleife über den Inhalt von agents
 			ag.move(); // polymorphic!
 
 			if ( ag instanceof CanBark ){
